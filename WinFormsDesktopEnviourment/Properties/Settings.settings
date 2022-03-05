@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WinFormsDesktopEnviourment.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ProcessorName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Processor (Unable To Detect)</Value>
+    </Setting>
+    <Setting Name="GraphicsName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Graphics (Unable To Detect)</Value>
+    </Setting>
+    <Setting Name="RamAmount" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0 KB (Unable To Detect)</Value>
+    </Setting>
+    <Setting Name="WindowsVersion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Windows NT (Unable To Detect)</Value>
+    </Setting>
+    <Setting Name="TaskbarSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">32</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

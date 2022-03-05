@@ -1,0 +1,1310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{48E9D8D8-BA21-4DEE-BAE7-D92488235C41}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WinFormsDesktopEnviourment</RootNamespace>
+    <AssemblyName>WinFormsDesktopEnviourment</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>WinFormsDesktopEnviourment.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core Widgets\ShutdownFade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core Widgets\ShutdownFade.Designer.cs">
+      <DependentUpon>ShutdownFade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core Widgets\CalenderView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core Widgets\CalenderView.Designer.cs">
+      <DependentUpon>CalenderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core Widgets\StartMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core Widgets\StartMenu.Designer.cs">
+      <DependentUpon>StartMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesktopInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesktopInterface.Designer.cs">
+      <DependentUpon>DesktopInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ShutdownDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ShutdownDialog.Designer.cs">
+      <DependentUpon>ShutdownDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Taskbar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Taskbar.Designer.cs">
+      <DependentUpon>Taskbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Core Widgets\ShutdownFade.resx">
+      <DependentUpon>ShutdownFade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core Widgets\CalenderView.resx">
+      <DependentUpon>CalenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core Widgets\StartMenu.resx">
+      <DependentUpon>StartMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesktopInterface.resx">
+      <DependentUpon>DesktopInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ShutdownDialog.resx">
+      <DependentUpon>ShutdownDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taskbar.resx">
+      <DependentUpon>Taskbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-unlocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\002-video player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\003-video player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\004-picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\005-picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\006-video player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\007-television.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\008-film.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\009-photo camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\010-record.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\011-photo camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\012-video camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\013-music player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\014-music player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\015-video camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\016-music player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\017-compact disc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\018-compact disc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\019-compact disc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\020-music player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\021-view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\022-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\023-next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\024-back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\025-play button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\026-stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\027-pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\028-fast forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\029-rewind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\030-eject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\031-shuffle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\032-hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\033-repeat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\034-skip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\035-previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\036-play button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\037-stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\038-pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\039-fast forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\040-rewind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\041-eject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\042-shuffle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\043-view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\044-repeat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\045-speaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\046-speaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\047-speaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\048-speaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\049-mute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\050-speaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\051-speaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\052-speaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\053-speaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\054-view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\055-speaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\056-plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\057-minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\058-error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\059-success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\060-warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\061-info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\062-forbidden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\063-shutdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\064-restart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\065-perspective.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\066-power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\067-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\068-substract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\069-multiply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\070-divide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\071-equal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\072-percent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\073-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\074-minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\075-equal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\076-focus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\077-division.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\078-magic wand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\079-calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\080-calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\081-checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\082-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\083-substract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\084-multiply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\085-divide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\086-equal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\087-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\088-percent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\089-share.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\090-share.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\091-share.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\092-network.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\093-binoculars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\094-checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\095-download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\096-upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\097-send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\098-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\099-incoming.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\100-like.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\101-dislike.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\102-infinity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\103-wireless internet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\104-wifi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\105-photos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\106-wifi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\107-megaphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\108-megaphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\109-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\110-zoom in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111-idea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\112-server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\113-server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\114-server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\115-server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\116-database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\117-database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\118-database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\119-database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\120-cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\121-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\122-cloud computing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\123-cloud computing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\124-cloud computing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\125-cloud computing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\126-cloud computing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\127-cloud computing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\128-like.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\129-dislike.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\130-like.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\131-star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\132-tabs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\133-star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\134-map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\135-map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\136-map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\137-placeholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\138-placeholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\139-placeholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\140-internet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\141-radar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\142-target.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\143-windows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\144-television.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\145-hourglass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\146-hourglass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\147-hourglass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\148-hourglass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\149-id card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\150-id card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\151-id card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\152-id card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\153-id card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\154-windows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\155-id card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\156-battery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\157-battery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\158-battery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\159-battery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\160-battery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\161-battery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\162-battery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\163-battery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\164-battery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\165-layers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\166-battery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\167-command.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\168-compose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\169-reading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\170-flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\171-flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\172-flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\173-flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\174-flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\175-bookmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\176-windows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\177-agenda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\178-controls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\179-controls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\180-controls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\181-controls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\182-controls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\183-controls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\184-controls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\185-controls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\186-controls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\187-tabs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\188-controls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\189-umbrella.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\190-help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\191-magnet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\192-magnet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\193-magnet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\194-fingerprint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\195-attachment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\196-hold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\197-diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\198-windows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\199-push pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200-settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\201-settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\202-settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\203-settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\204-settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\205-settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\206-settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\207-settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\208-settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\209-windows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\210-settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\211-gift.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\212-alarm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\213-alarm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\214-worldwide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\215-funnel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\216-key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\217-worldwide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\218-edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\219-fax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\220-layers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\221-zoom out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\222-print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\223-clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\224-clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\225-alarm clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\226-alarm clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\227-time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\228-stopwatch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\229-stopwatch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\230-stopwatch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\231-stopwatch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\232-albums.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\233-stopwatch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\234-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\235-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\236-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\237-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\238-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\239-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\240-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\241-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\242-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\243-garbage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\244-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\245-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\246-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\247-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\248-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\249-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\250-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\251-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\252-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\253-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\254-garbage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\255-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\256-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\257-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\258-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\259-document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\260-resume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\261-diploma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\262-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\263-notepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\264-notepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\265-garbage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\266-notepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\267-note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\268-calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\269-calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\270-calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\271-calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\272-blueprint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\273-calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\274-calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\275-bookmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\276-trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\277-newspaper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\278-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\279-edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\280-notebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\281-notebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\282-notebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\283-notebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\284-notebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\285-notebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\286-calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\287-link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\288-calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\289-smartphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\290-smartphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\291-smartphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\292-smartphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\293-smartphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\294-smartphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\295-smartphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\296-smartphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\297-smartphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\298-unlink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\299-smartphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\300-smartphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\301-smartphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\302-spotlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\303-lamp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\304-archive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\305-archive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\306-archive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\307-archive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\308-price tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\309-broken link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\310-briefcase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\311-app.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\312-notification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\313-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\314-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\315-more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\316-more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\317-bluetooth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\318-bluetooth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\319-exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\320-login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\321-exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\322-exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\323-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\324-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\325-close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\326-switch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\327-switch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\328-switch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\329-switch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\330-volume control.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\331-volume control.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\332-switch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\333-switch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\334-switch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\335-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\336-switch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\337-lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\338-lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\339-microphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\340-muted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\341-microphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\342-navigation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\343-navigation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\344-compass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\345-more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\346-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\347-route.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\348-street.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\349-street.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\350-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\351-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352-pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\353-placeholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\354-map location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\355-placeholders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\356-paper plane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\357-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\358-paper plane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\359-users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360-users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\361-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\362-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\363-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\364-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\365-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\366-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\367-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\368-house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\369-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\370-locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\371-locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\372-locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\373-locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\374-locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\375-unlocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\376-locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\377-unlocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\378-locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\379-eyeglasses.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tools\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
